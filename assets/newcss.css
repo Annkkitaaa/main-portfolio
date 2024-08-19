@@ -283,6 +283,10 @@ img {
   color: var(--first-color-lighter);
 }
 
+.home__social-icon svg {
+  fill: var(--first-color); /* Ensures SVG icon color matches others */
+}
+
 .home__blob {
   width: 200px;
   fill: var(--first-color);
