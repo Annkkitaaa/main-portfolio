@@ -17,7 +17,19 @@
      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
      />
      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  
+     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const experienceHeaders = document.querySelectorAll('.experience__header');
+        
+        experienceHeaders.forEach(header => {
+          header.addEventListener('click', () => {
+            const content = header.parentElement;
+            content.classList.toggle('experience__open');
+            content.classList.toggle('experience__close');
+          });
+        });
+      });
+      </script>
 
 
   </head>
@@ -590,7 +602,7 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Research Intern -->
     <div class="experience__content experience__close">
       <div class="experience__header">
@@ -621,6 +633,7 @@
     </div>
   </div>
 </section>
+
       <!--=================== Portfolio ===================-->
       <section class="portfolio section" id="portfolio">
         <h2 class="section__title">Projects</h2>

@@ -695,6 +695,78 @@ img {
 .active-modal {
   opacity: 1;
   visibility: visible;
+
+
+}
+
+
+/*=============experinece====================*/
+.experience__container {
+  row-gap: 0;
+}
+
+.experience__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-2-5);
+  cursor: pointer;
+}
+
+.experience__icon,
+.experience__arrow {
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+.experience__icon {
+  margin-right: var(--mb-0-75);
+}
+
+.experience__title {
+  font-size: var(--h3-font-size);
+}
+
+.experience__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.experience__arrow {
+  margin-left: auto;
+  transition: 0.4s;
+}
+
+.experience__list {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+
+.experience__data {
+  margin-bottom: var(--mb-0-5);
+}
+
+.experience__description {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.experience__content.experience__close .experience__list {
+  height: 0;
+  overflow: hidden;
+}
+
+.experience__content.experience__open .experience__list {
+  height: max-content;
+  margin-bottom: var(--mb-2-5);
+}
+
+.experience__content.experience__open .experience__arrow {
+  transform: rotate(-180deg);
+}
+
+/* Dark theme colors */
+.dark-theme .experience__subtitle {
+  color: var(--text-color-light-dark);
 }
 
 /*================== Portfolio ==================*/
