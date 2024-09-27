@@ -16,6 +16,139 @@
      rel="stylesheet"
      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
      />
+     <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #1a1a2e;
+          color: #e0e0e0;
+          line-height: 1.6;
+      }
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+      .section__title {
+          text-align: center;
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+      }
+      .section__subtitle {
+          display: block;
+          text-align: center;
+          font-size: 1rem;
+          margin-bottom: 3rem;
+          opacity: 0.8;
+      }
+      .experience__content {
+          background-color: #16213e;
+          border-radius: 10px;
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+          transition: all 0.3s ease;
+      }
+      .experience__header {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+      }
+      .experience__title {
+          font-size: 1.2rem;
+          margin: 0;
+      }
+      .experience__subtitle {
+          font-size: 0.9rem;
+          opacity: 0.8;
+      }
+      .experience__arrow {
+          font-size: 1.5rem;
+          transition: transform 0.3s ease;
+      }
+      .experience__list {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s ease;
+      }
+      .experience__description {
+          margin-top: 1rem;
+          padding-left: 1rem;
+          border-left: 2px solid #e0e0e0;
+      }
+      .experience__content.active .experience__arrow {
+          transform: rotate(180deg);
+      }
+      .experience__content.active .experience__list {
+          max-height: 1000px;
+      }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <style>
+      .about-me__container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+      .about-me__title {
+          text-align: center;
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+          opacity: 0;
+      }
+      .about-me__subtitle {
+          display: block;
+          text-align: center;
+          font-size: 1rem;
+          margin-bottom: 3rem;
+          opacity: 0;
+      }
+      .about-me__content {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+      }
+      .about-me__img-container {
+          flex: 1;
+          max-width: 400px;
+          margin-right: 40px;
+          opacity: 0;
+      }
+      .about-me__img {
+          width: 100%;
+          border-radius: 15px;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      }
+      .about-me__text {
+          flex: 1;
+          min-width: 300px;
+      }
+      .about-me__description {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          margin-bottom: 2rem;
+          opacity: 0;
+      }
+      .about-me__cta {
+          opacity: 0;
+      }
+      .about-me__button {
+          display: inline-block;
+          background-color: #4a69bd;
+          color: #ffffff;
+          padding: 12px 24px;
+          border-radius: 30px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+      }
+      .about-me__button:hover {
+          background-color: #1e3799;
+      }
+      .about-me__button-icon {
+          margin-left: 10px;
+      }
+  </style>
 
   </head>
 
@@ -197,43 +330,75 @@
 
       <!--======================= About========================-->
 
-      <section class="about section" id="about">
-        <h2 class="section__title">About Me</h2>
-        <span class="section__subtitle">My introduction</span>
+      <section class="about-me" id="about-me">
+        <div class="about-me__container">
+            <h2 class="about-me__title">About Me</h2>
+            <span class="about-me__subtitle">My introduction</span>
 
-        <div class="about__container container grid">
-         <img src="assets\img\about.jpg" alt="" class="about__img" />
-
-          <div class="about__data">
-            <p class="about__description">
-              MSc Mathematics and Computing graduate from IIT (ISM) Dhanbad, with a strong foundation in mathematics and a keen interest in data science, cryptography, and blockchain technology. Proficient in Python, SQL, and cloud computing platforms, I am passionate about leveraging data to uncover insights and drive innovation. Currently exploring the exciting fields of cryptography and blockchain, eager to apply my analytical skills to real-world challenges.</p>
-            </p>
-
-            <!-- <div class="about__info">
-
-              <div>
-                <span class="about__info-title">04+</span>
-                <span class="about__info-name"
-                  >
-                  Projects</span
-                >
-              </div>
-
-              <div>
-                <span class="about__info-title">05+</span>
-                <span class="about__info-name">Months <br />experience</span>
-              </div>
-            </div> -->
-
-            <div class="about__buttons">
-              <a download="" href="assets\ankita_singh.pdf" class="button button--flex">
-                Download CV<i class="fas fa-download button__icon"></i>
-              </a>
+            <div class="about-me__content">
+                <div class="about-me__img-container">
+                    <img src="assets/img/about.jpg" alt="Profile picture" class="about-me__img" />
+                </div>
+                <div class="about-me__text">
+                    <p class="about-me__description">
+                        MSc Mathematics and Computing graduate from IIT (ISM) Dhanbad, with a strong foundation in mathematics and a keen interest in data science, cryptography, and blockchain technology. Proficient in Python, SQL, and cloud computing platforms, I am passionate about leveraging data to uncover insights and drive innovation. Currently exploring the exciting fields of cryptography and blockchain, eager to apply my analytical skills to real-world challenges.
+                    </p>
+                    <div class="about-me__cta">
+                        <a download="" href="assets/ankita_singh.pdf" class="about-me__button">
+                            Download CV<i class="fas fa-download about-me__button-icon"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const aboutSection = document.querySelector('.about-me');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateAboutSection();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            observer.observe(aboutSection);
+
+            function animateAboutSection() {
+                anime.timeline({
+                    easing: 'easeOutQuad',
+                    duration: 1500
+                })
+                .add({
+                    targets: '.about-me__title, .about-me__subtitle',
+                    opacity: [0, 1],
+                    translateY: [20, 0],
+                    delay: anime.stagger(300)
+                })
+                .add({
+                    targets: '.about-me__img-container',
+                    opacity: [0, 1],
+                    translateX: [-30, 0],
+                    duration: 1800
+                }, '-=1200')
+                .add({
+                    targets: '.about-me__description',
+                    opacity: [0, 1],
+                    translateX: [30, 0],
+                    duration: 1800
+                }, '-=1500')
+                .add({
+                    targets: '.about-me__cta',
+                    opacity: [0, 1],
+                    translateY: [20, 0],
+                    duration: 1200
+                }, '-=1200');
+            }
+        });
+    </script>
       <!--===================== SKILLS =====================-->
 
       <section class="skills section" id="skills">
@@ -310,9 +475,9 @@
             <div class="skills__content skills__close">
               <div class="skills__header">
                 <i class="fas fa-chart-line skills__icon"></i>
-                "></i>
+                </i>
                 <div>
-                  <h1 class="skills__title">Data Science and ML</h1>
+                  <h1 class="skills__title"> Data Science and ML</h1>
                 </div>
       
                 <i class="uil uil-angle-down skills__arrow"></i>
@@ -560,71 +725,55 @@
 <!--===================== EXPERIENCE =====================-->
 
 <section class="experience section" id="experience">
-  <h2 class="section__title">Experience</h2>
-  <span class="section__subtitle">My work experience</span>
+  <div class="container">
+      <h2 class="section__title">Experience</h2>
+      <span class="section__subtitle">My work experience</span>
 
-  <div class="experience__container container grid">
-    <!-- Data Science Intern -->
-    <div class="experience__content experience__close">
-      <div class="experience__header">
-        <i class="uil uil-briefcase-alt experience__icon"></i>
-        <div>
-          <h1 class="experience__title">Data Science Intern</h1>
-          <span class="experience__subtitle">Infinite Analytics | April 2024 - Present</span>
-        </div>
-        <i class="uil uil-angle-down experience__arrow"></i>
-      </div>
+      <div class="experience__container">
+          <!-- Data Science Intern -->
+          <div class="experience__content">
+              <div class="experience__header">
+                  <div>
+                      <h3 class="experience__title">Data Science Intern</h3>
+                      <span class="experience__subtitle">Infinite Analytics | April 2024 - Present</span>
+                  </div>
+                  <span class="experience__arrow">&#9660;</span>
+              </div>
 
-      <div class="experience__list grid">
-        <div class="experience__data">
-          <p class="experience__description">
-            - Analysed and optimised campaign data.
-          </p>
-        </div>
-        <div class="experience__data">
-          <p class="experience__description">
-            - Worked on campaign optimisation model based on Deep Q learning.
-          </p>
-        </div>
-        <div class="experience__data">
-          <p class="experience__description">
-            - Worked on Geospatial data to analyse Point of interest and extract brands.
-          </p>
-        </div>
-      </div>
-    </div>
+              <div class="experience__list">
+                  <p class="experience__description">- Analysed and optimised campaign data.</p>
+                  <p class="experience__description">- Worked on campaign optimisation model based on Deep Q learning.</p>
+                  <p class="experience__description">- Worked on Geospatial data to analyse Point of interest and extract brands.</p>
+              </div>
+          </div>
 
-    <!-- Research Intern -->
-    <div class="experience__content experience__close">
-      <div class="experience__header">
-        <i class="uil uil-briefcase-alt experience__icon"></i>
-        <div>
-          <h1 class="experience__title">Research Intern</h1>
-          <span class="experience__subtitle">Indian Institute of Technology, Dhanbad | January 2024 - May 2024</span>
-        </div>
-        <i class="uil uil-angle-down experience__arrow"></i>
-      </div>
+          <!-- Research Intern -->
+          <div class="experience__content">
+              <div class="experience__header">
+                  <div>
+                      <h3 class="experience__title">Research Intern</h3>
+                      <span class="experience__subtitle">Indian Institute of Technology, Dhanbad | January 2024 - May 2024</span>
+                  </div>
+                  <span class="experience__arrow">&#9660;</span>
+              </div>
 
-      <div class="experience__list grid">
-        <div class="experience__data">
-          <p class="experience__description">
-            - Collaborated with Prof. Manisha Verma on a project focused on human yoga posture detection.
-          </p>
-        </div>
-        <div class="experience__data">
-          <p class="experience__description">
-            - Utilized Graph Neural Networks (GNN) for the detection process
-          </p>
-        </div>
-        <div class="experience__data">
-          <p class="experience__description">
-            - Worked with a dataset containing images of various yoga postures. Focused on identifying joint points as node points in the network.
-          </p>
-        </div>
+              <div class="experience__list">
+                  <p class="experience__description">- Collaborated with Prof. Manisha Verma on a project focused on human yoga posture detection.</p>
+                  <p class="experience__description">- Utilized Graph Neural Networks (GNN) for the detection process</p>
+                  <p class="experience__description">- Worked with a dataset containing images of various yoga postures. Focused on identifying joint points as node points in the network.</p>
+              </div>
+          </div>
       </div>
-    </div>
   </div>
 </section>
+
+<script>
+  document.querySelectorAll('.experience__header').forEach(header => {
+      header.addEventListener('click', () => {
+          header.parentElement.classList.toggle('active');
+      });
+  });
+</script>
       <!--=================== Portfolio ===================-->
       <section class="portfolio section" id="portfolio">
         <h2 class="section__title">Projects</h2>
